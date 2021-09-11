@@ -1,0 +1,72 @@
+.logo {
+    max-width: 550px;
+	padding: 1rem;
+}
+
+header, main, footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+}
+
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+    margin-top: 2rem;
+    padding-top: 1.45rem;
+    padding-bottom: 2rem;
+}
+
+footer p {
+    color: #8f8f8f;
+}
+
+.text-semidark {
+    color: #464646;
+}
+
+.noselect {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.list-unstyled {
+    list-style: none;
+}
+
+.inline {
+    display: inline;
+}
+
+.rounded-1 {
+    border-radius: .1rem;
+}
+
+.word-break {
+    word-break: break-all;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.outline {
+    outline: .15em solid #464646;
+}

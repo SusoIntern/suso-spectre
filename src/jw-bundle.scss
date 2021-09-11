@@ -1,0 +1,83 @@
+// Spectre
+@import "spectre.scss";
+
+// Icons
+@import "icons/icons-core";
+@import "icons/icons-navigation";
+@import "icons/icons-action";
+@import "icons/icons-object";
+
+// Custom
+@import "custom";
+@import "hkgrotesk";
+
+.btn-warning {
+	@include button-variant($warning-color);
+}
+
+// .btn-outline-warning {
+//   @include button-outline-variant($warning-color);
+// }
+
+$jw-colors: (
+	1: #ff1816,
+	2: #ff4811,
+	3: #ff780c,
+	4: #ffa807,
+	5: #ffd802,
+	6: #e4e702,
+	7: #b2d906,
+	8: #80cb09,
+	9: #4cbc0d,
+	10: #0aaa12,
+);
+
+@each $jwc-no, $jwc in $jw-colors {
+	.jwv-btn-#{$jwc-no} {
+		@include button-variant($jwc);
+	}
+
+	@include bg-color-variant(".jwv-bg-#{$jwc-no}", $jwc);
+	@include text-color-variant(".jwv-text-#{$jwc-no}", $jwc);
+}
+
+@media (min-width: 600px) {
+	.jwv-width {
+		min-width: 2.5rem;
+	}
+}
+
+.jwv-width-sm {
+	width: 100%;
+}
+
+.flex-xs, .inline-xs {
+  display: none !important;
+}
+
+@media (max-width: 600px) {
+  .flex-xs {
+      display: flex !important;
+  }
+
+  .inline-xs {
+      display: inline !important;
+  }
+}
+
+.border-0 {
+  border-radius: 0;
+}
+
+$corners: (
+	tl: 0.1rem 0 0 0,
+	tr: 0 0.1rem 0 0,
+	bl: 0 0 0 0.1rem,
+	br: 0 0 0.1rem 0,
+);
+
+@each $corner, $radius in $corners {
+	.border-#{$corner} {
+		border-radius: $radius;
+	}
+}

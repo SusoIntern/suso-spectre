@@ -34,4 +34,15 @@
       width: $unit-8;
     }
   }
+
+  &.loading-xl {
+    min-height: $unit-16;
+    &::after {
+      height: $unit-12;
+      margin-left: -$unit-4;
+      margin-top: -$unit-4;
+      width: $unit-12;
+      border-width: .25em;
+    }
+  }
 }
